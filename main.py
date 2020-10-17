@@ -23,3 +23,9 @@ class Parking:
         else:
             raise EmptyParking("Empty parking lot - all cars sold")
 
+    def show_cars(self):
+        """ This method allows the car dealer to view information
+        about vehicles in a parking lot """
+        cars_on_parking = ','.join((map(lambda x: x.title(), self.cars_list)))
+        return f'The Cracow department has the following cars : {cars_on_parking}'
+
