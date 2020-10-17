@@ -74,4 +74,13 @@ class TestParking:
         assert parking.cars_amount == 1
         assert parking.car_dealer_cash == 93800
 
+    def test_sell_car_when_empty_parking(self, audi):
+        """ Test : 'I have not own cars - Can I sell them?' """
+        #given
+        parking = Parking()
+
+        #when / then
+        with pytest.raises(EmptyParking):
+            parking.sell_car(audi)
+
 
