@@ -36,4 +36,18 @@ class TestParking:
         assert parking.cars_list == ['audi']
         assert parking.car_dealer_cash == 31000
 
+    def test_repurchase_more_cars(self, audi, mercedes):
+        """ Test : 'Can I buy more than one car?' """
+        # given
+        parking = Parking()
+
+        # when
+        parking.repurchase_car(audi)
+        parking.repurchase_car(mercedes)
+
+        #then
+        assert parking.cars_amount == 2
+        assert parking.cars_list == ['audi','mercedes']
+        assert parking.car_dealer_cash == 11000
+
 
