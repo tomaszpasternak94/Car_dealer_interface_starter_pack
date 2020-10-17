@@ -50,4 +50,13 @@ class TestParking:
         assert parking.cars_list == ['audi','mercedes']
         assert parking.car_dealer_cash == 11000
 
+    def test_repurchase_too_expensive_car(self, bentley):
+        """ Test : 'I have no money - Can I buy this car?' """
+        # given
+        parking = Parking()
+
+        # when / then
+        with pytest.raises(TooExpensive):
+            parking.repurchase_car(bentley)
+
 
