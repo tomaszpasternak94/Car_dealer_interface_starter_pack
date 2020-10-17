@@ -35,3 +35,13 @@ class Car:
         self.brand = brand
         self.model = model
         self.price = price
+
+# Dedicated Exceptions
+class TooExpensive(Exception):
+    """ Car dealer don't have enough money to repurchase """
+    pass
+
+class EmptyParking(Exception):
+    """ Cannot sell car - parking lot is empty """
+    pass
+# Dedicated Exceptions End
