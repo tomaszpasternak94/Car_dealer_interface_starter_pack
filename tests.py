@@ -1,3 +1,8 @@
+from main import Parking
+from main import Car
+from main import TooExpensive
+from main import EmptyParking
+
 import pytest
 
 class TestParking:
