@@ -16,4 +16,11 @@ class TestParking:
         bentley = Car('Bentley', 'Continental GT', 400000)
         return bentley
 
+    def test_create_parking(self):
+        """ Test : 'Was the instance created correctly?' """
+        parking = Parking()
+        assert isinstance(parking, Parking)
+        assert parking.car_dealer_cash == 100000
+        assert parking.cars_amount == 0
+
 
