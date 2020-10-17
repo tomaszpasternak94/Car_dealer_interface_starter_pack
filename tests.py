@@ -23,4 +23,17 @@ class TestParking:
         assert parking.car_dealer_cash == 100000
         assert parking.cars_amount == 0
 
+    def test_repurchase_car(self, audi):
+        """ Test : 'Can I buy one car?' """
+        #given
+        parking = Parking()
+
+        #when
+        parking.repurchase_car(audi)
+
+        #then
+        assert parking.cars_amount == 1
+        assert parking.cars_list == ['audi']
+        assert parking.car_dealer_cash == 31000
+
 
