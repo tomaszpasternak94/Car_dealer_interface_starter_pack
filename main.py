@@ -29,3 +29,9 @@ class Parking:
         cars_on_parking = ','.join((map(lambda x: x.title(), self.cars_list)))
         return f'The Cracow department has the following cars : {cars_on_parking}'
 
+class Car:
+    """ Used cars : brand, model, price """
+    def __init__(self, brand, model, price):
+        self.brand = brand
+        self.model = model
+        self.price = price
